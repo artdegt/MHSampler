@@ -6,10 +6,10 @@ import scientifik.plotly.models.Type
 import scientifik.plotly.trace
 import java.util.Random
 
-fun new_coord(coord: DoubleArray, my_func: (DoubleArray)->Double): DoubleArray {
+fun newCoord(coord: DoubleArray, my_func: (DoubleArray)->Double): DoubleArray {
     val random = Random()
-    var z = DoubleArray(coord.size, {0.0})
-    for (i in 0 until z.size) {
+    var z = DoubleArray(coord.size) {0.0}
+    for (i in z.indices) {
         z[i] = random.nextGaussian() * 0.5 + coord[i]
     }
     var r = my_func(z) / my_func(coord)
@@ -17,20 +17,20 @@ fun new_coord(coord: DoubleArray, my_func: (DoubleArray)->Double): DoubleArray {
     else {return coord}
 }
 
-fun generate_random_walks(num: Int, dim: Int, my_func: (DoubleArray)->Double): Array<DoubleArray> {
-    var coord = DoubleArray(dim, {-1.0})
+fun generateRandomWalks(num: Int, dim: Int, my_func: (DoubleArray)->Double): Array<DoubleArray> {
+    var coord = DoubleArray(dim) {-1.0}
     for (i in 0..1000) {
-        coord = new_coord(coord, my_func)
+        coord = newCoord(coord, my_func)
     }
-    var points = Array(num, {DoubleArray(dim, {0.0})}) // значения функции в точках
+    var points = Array(num) {DoubleArray(dim) {0.0} } // значения функции в точках
     for (i in 0 until num) {
-        coord = new_coord(coord, my_func)
+        coord = newCoord(coord, my_func)
         points[i] = coord
     }
     return points
 }
 
-fun makeplot(walks: Array<DoubleArray>, dim: Int) : PlotGrid {
+fun makePlot(walks: Array<DoubleArray>, dim: Int) : PlotGrid {
     val plot = Plotly.page {
         //title = "Sample of 5D normal distribution"
         for (i in 0 until dim) {
