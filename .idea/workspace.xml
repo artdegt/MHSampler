@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9b0a2ae-68d7-41e9-af13-db01d16b7820" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="c9b0a2ae-68d7-41e9-af13-db01d16b7820" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,6 +168,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586166753404" />
+    <state x="446" y="205" key="git4idea.rebase.GitRebaseDialog" timestamp="1586168564955">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="205" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1586168564955" />
     <state x="91" y="0" key="new project wizard" timestamp="1584868894005">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
