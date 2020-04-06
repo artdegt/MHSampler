@@ -9,8 +9,10 @@ fun myFunc2(coord: DoubleArray): Double {
         coord.size)
 }
 fun main() {
-    val num = 10000
+    val num = 30000
     val dim = 7
-    val walks = generateRandomWalks(num, dim, ::myFunc2)
-    makePlot(walks, dim).makeFile(java.io.File("C:/Users/user/IdeaProjects/MHSampler/examples/example2.html"))
+    val initialCoord = DoubleArray(dim) {-1.0}
+    val step = 0.2
+    val pathFile = "C:/Users/user/IdeaProjects/MHSampler/examples/example2.html"
+    sample(num, dim, ::myFunc2, pathFile, initialCoord, step)
 }

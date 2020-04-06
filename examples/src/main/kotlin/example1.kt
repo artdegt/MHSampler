@@ -19,6 +19,8 @@ fun myFunc1(coord: DoubleArray): Double {
 fun main() {
     val num = 10000
     val dim = 5
-    val walks = generateRandomWalks(num, dim, ::myFunc1)
-    makePlot(walks, dim).makeFile(File("C:/Users/user/IdeaProjects/MHSampler/examples/example1.html"))
+    val initialCoord = DoubleArray(dim) {-1.0}
+    val step = 1.0
+    val pathFile = "C:/Users/user/IdeaProjects/MHSampler/examples/example1.html"
+    sample(num, dim, ::myFunc1, pathFile, initialCoord, step)
 }
