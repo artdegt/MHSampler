@@ -1,6 +1,6 @@
 import sampler.*
 
-import scientifik.plotly.makeFile
+//import scientifik.plotly.makeFile
 
 fun myFunc3(coord: DoubleArray): Double {
     return cauchyDistr(coord,
